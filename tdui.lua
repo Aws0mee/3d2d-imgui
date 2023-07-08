@@ -547,6 +547,7 @@ end
 
 -- Queues a render operation to be done during next render pass
 function tdui_meta:_QueueRenderOP(op, ...)
+	local x = {...}
 	local fn = tdui.RenderOperations[op]
 	if not fn then
 		error("Trying to queue inexistent render operation '" .. op .. "''")
